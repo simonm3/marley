@@ -1,0 +1,60 @@
+for nigeria challenge
+
+no data is perfect
+    it is out of date
+    it was collected for a different purpose
+    the people collecting it had an agenda
+    the quality of collection is variable and depends on samples
+luckily we don't need perfect but the better the data, the better the solution, the more people we can help for our budget.
+
+within 2 weeks we had a minimal solution. this is immediately useful:
+    provides a skeleton pipeline that works but each stage can be improved
+    provides visualisations that show what is possible and can be improved
+    used only 2 data sources - we can add more later
+    used the first reasonable data sources found
+already adds value compared with "zero data". but we know we can do better......
+
+issues with initial data
+    population
+        census is unreliable
+            data drives spending so local officials have an incentive to make numbers bigger
+            there is corruption so in some areas the census numbers may be made up
+            detailed data is not published so it is hard to check the numbers are realistic
+            even total population for the country can never be known exactly
+            quality of data collection is variable
+            it is out of date
+        allocating census population to smaller areas is usually based on buildings but this is unreliable
+            a city rooftop may be a high rise with 1000 people or a warehouse with none
+            rural buildings may be abandoned as people move to the city
+            density of people per building varies widely
+        leading population models did not fit our application
+            google earth showed forests and deserts where the leading population models showed people
+            google earth showed large settlements with apparently no population and not marked on google maps
+    electricity
+        in surveys the definition of who has electricity is unclear
+            some are on the grid but not connected
+            some can access electricity in their village but not in their house
+            some offically are connected to the grid but it has not worked in 3 years since the transformer broke
+            some have connection but it only works some days for some hours
+        satellite data on nightime lights is not perfect either
+            individual months can show significant variation e.g. one month shows a whole region lit which is dark normally
+            some roads are lit by car headlights - we can see on google earth there are no street lamps.
+            satellites vary in their sensitivity
+    the grid
+        electricity companies do not have a complete map of their powerlines
+        parts of the grid exist but may not actually work
+
+solutions
+    population
+        reviewed and validated more than a dozen different models
+        selected a bottom up model based on surveys rather than spreading the census
+        this model was tested/refined by a vaccination programme giving confidence that it works on the ground
+        it also matched well with manual estimates based on looking at buildings on google earth
+    electricity
+        combined multiple months and satellite sources
+        still not perfect and we had to make manual trade-offs but we don't need perfect
+    the grid
+        a neural network model combined with manual checking was available which looked most realistic
+        it is often the case that combining complex models with human checking produces the best results
+
+

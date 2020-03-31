@@ -1,0 +1,59 @@
+article 2015
+    CVG = free sunlight, moonlight, straylight, HEP
+    CF_CVF = as above + cloud free
+    RCFC = raw cloud free. removes above. includes lights, biomass, aurora, gas flares, volcanoes, noise
+    ORCFC = removes outliers for biomass and aurora
+    VNL = removes all except lights and persistent gas flares
+
+NOA/NASA /VIIRS + GEE
+    VCMCFG = cloud free
+    VCMSLCFG = stray light corrected
+
+datasets
+    random forest to predict census 775 areas adjusted for UNPD estimates.
+    built settlement extents 2013 (already in above)
+    landscan
+
+
+worldpop methodology
+    census counts
+        any census free methods
+        dead - geohive.com
+
+    mapping populations land cover (now replaced by random forest?)
+        majority mapped in settlements. remainder using methods elsewhere
+            dead - http://www.springerlink.com/content/p12p45n763v67888/?p=76f5da312100404e8c6673bb713ef389&pi=1
+        settlements refine land cover data
+        high res data used too determine regional/land cover densities - source of high res? countries?
+    random forest
+        Stevens et al mentions use of settlement locations, land cover etc.
+        random forest predicts census data and provides weights
+        weights applied to local areas at 100m resolution (though not all data at that resolution)
+    VTS bottom up mapping
+        where census outdate or unreliable
+        oak ridge
+        satellite + household surveys
+    intra urban
+        urban areas only
+
+
+    worldpop borders
+        same as GADM? in geopackage?
+        std codes or map names of areas
+
+###########################################################################################
+geopandas
+rasterio
+rasterstats
+geopy
+
+gee
+
+plotly
+google earth pro
+google earth engine
+qgis
+
+jupyter notebook
+xonsh
+###############################################################################################
